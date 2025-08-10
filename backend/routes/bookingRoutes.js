@@ -6,7 +6,7 @@ const geofenceMiddleware = require("../middlewares/geofenceMiddleware");
 
 router.post('/book', authMiddleware, bookingController.book); 
 router.delete('/cancel', authMiddleware, bookingController.cancelBooking); 
-router.get('/getall', authMiddleware, bookingController.getAllBookings); 
+router.post('/getall', authMiddleware, bookingController.getAllBookings); 
 router.put('/validate', authMiddleware, geofenceMiddleware, bookingController.validateBooking); 
 
 module.exports = router;
